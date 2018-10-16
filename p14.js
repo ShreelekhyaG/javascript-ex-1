@@ -13,9 +13,20 @@
         }
     }
     console.log(myObj.sort((a,b)=>b.age-a.age));
-    var anotherObj=[];
+    var anotherObj={};
     for(var v of myObj){
-        anotherObj[v.occupation]=v;
+        anotherObj[v.occupation]=[];
+    }
+    for(var v of myObj){
+            var occ=v.occupation;
+            delete v.occupation;
+            anotherObj[occ].push(v);
     }
     console.log(anotherObj);
+    var reformatteArray=[];
+    var reformattedArray = myObj.map(obj =>{ 
+   return obj.name;
+    });
+   // newArr=myObj.map(function(i){return newArr.push(myObj.name)});
+    console.log(reformattedArray);
 })();
