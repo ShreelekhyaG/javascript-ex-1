@@ -25,7 +25,7 @@
     console.log(anotherObj);
     var reformatteArray=[];
     var reformattedArray = myObj.map(obj =>{ 
-   return obj.name;
+    return obj.name;
     });
    // newArr=myObj.map(function(i){return newArr.push(myObj.name)});
     console.log(reformattedArray);
